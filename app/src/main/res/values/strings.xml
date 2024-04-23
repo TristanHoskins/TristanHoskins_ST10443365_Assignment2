@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IMAD Assignment2 _ST10443365 Tristan Hoskins</string>
+    <string name="image">imageView</string>
+    <string name="button1">Get Started</string>
+    <string name="welcome_to_luna_your_tamaghochi_app">Welcome to Luna your Tamaghochi app</string>
+    <string name="feedB">feed</string>
+    <string name="cleanB">clean</string>
+    <string name="playB">play</string>
+    <string name="dogActions">imageView2</string>
+    <string name="hungerBar">hunger</string>
+    <string name="cleanBar">cleanBar</string>
+    <string name="happyBar">happyBar</string>
+    <string name="Hunger">hunger</string>
+    <string name="Clean">clean</string>
+    <string name="happy">happy</string>
+
+</resources>

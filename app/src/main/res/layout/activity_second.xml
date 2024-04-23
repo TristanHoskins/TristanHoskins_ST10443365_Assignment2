@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Second">
+
+    <Button
+        android:id="@+id/feedB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@color/blue"
+        android:text="@string/feedB"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cleanB"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cleanB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/blue"
+        android:text="@string/cleanB"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/playB"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/playB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/blue"
+        android:text="@string/playB"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="350dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="364dp"
+        android:contentDescription="@string/dogActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main" />
+
+    <TextView
+        android:id="@+id/hunger"
+        android:layout_width="134dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="76dp"
+        android:background="#9822AC"
+        android:backgroundTint="#EBCA86D6"
+        android:text="@string/Hunger"
+        android:textAlignment="center"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/hungerBar"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clean"
+        android:layout_width="135dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:background="#9822AC"
+        android:backgroundTint="#EBCA86D6"
+        android:text="@string/Clean"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/cleanBar"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hunger" />
+
+    <TextView
+        android:id="@+id/happy"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="#9822AC"
+        android:backgroundTint="#EBCA86D6"
+        android:text="@string/happy"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/happyBar"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clean" />
+
+    <ProgressBar
+        android:id="@+id/hungerBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="223dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:max="30"
+        android:progressTint="#191515"
+        android:secondaryProgressTint="#9C27B0"
+        android:text="@string/hungerBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/cleanBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="210dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="20dp"
+        android:max="30"
+        android:progressTint="#191515"
+        android:text="@string/cleanBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hungerBar" />
+
+    <ProgressBar
+        android:id="@+id/happyBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:max="30"
+        android:progressTint="#191515"
+        android:text="@string/happyBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cleanBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
