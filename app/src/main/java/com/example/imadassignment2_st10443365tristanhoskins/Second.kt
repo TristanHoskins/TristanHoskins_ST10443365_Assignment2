@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
-import android.widget.Toast
+
+
 
 class Second : AppCompatActivity() {
 
@@ -34,31 +35,20 @@ class Second : AppCompatActivity() {
         cleanBar = findViewById(R.id.cleanBar)
         happyBar = findViewById(R.id.happyBar)
 
+
+
         feed.setOnClickListener {
             image.setImageResource(R.drawable.eating)
             if (hungerProgress < 30) {
                 hungerProgress += 10
                 hungerBar.progress = hungerProgress
             }
-            if (hungerProgress == 30) {
-                feed.isEnabled = false
-                if (hungerProgress == 30 && cleanProgress == 30 && happyProgress == 30) {
-                    // Reset progress bars
-                    hungerProgress = 0
-                    cleanProgress = 0
-                    happyProgress = 0
-                    hungerBar.progress = 0
-                    cleanBar.progress = 0
-                    happyBar.progress = 0
-
-                    // Enable buttons
-                    feed.isEnabled = true
-                    clean.isEnabled = true
-                    play.isEnabled = true
-
-                    image.setImageResource(R.drawable.main)
-                Toast.makeText(this, "Luna is full!", Toast.LENGTH_SHORT).show()
-            }
+            hungerBar.postDelayed({
+                if (hungerProgress > 0) {
+                    hungerProgress -= 10
+                    hungerBar.progress = hungerProgress
+                }
+            }, 10000)
         }
 
         clean.setOnClickListener {
@@ -67,27 +57,12 @@ class Second : AppCompatActivity() {
                 cleanProgress += 10
                 cleanBar.progress = cleanProgress
             }
-            if (cleanProgress == 30) {
-                clean.isEnabled = false
-                if (hungerProgress == 30 && cleanProgress == 30 && happyProgress == 30) {
-                    // Reset progress bars
-                    hungerProgress = 0
-                    cleanProgress = 0
-                    happyProgress = 0
-                    hungerBar.progress = 0
-                    cleanBar.progress = 0
-                    happyBar.progress = 0
-
-                    // Enable buttons
-                    feed.isEnabled = true
-                    clean.isEnabled = true
-                    play.isEnabled = true
-
-                    image.setImageResource(R.drawable.main)
-                Toast.makeText(this, "Luna is clean!", Toast.LENGTH_SHORT).show()
-
-
-            }
+            cleanBar.postDelayed({
+                if (cleanProgress > 0) {
+                    cleanProgress -= 10
+                    cleanBar.progress = cleanProgress
+                }
+            }, 10000)
         }
         play.setOnClickListener {
             image.setImageResource(R.drawable.play)
@@ -95,26 +70,15 @@ class Second : AppCompatActivity() {
                 happyProgress += 10
                 happyBar.progress = happyProgress
             }
-            if (happyProgress == 30) {
-                play.isEnabled = false
-                if (hungerProgress == 30 && cleanProgress == 30 && happyProgress == 30) {
-                    // Reset progress bars
-                    hungerProgress = 0
-                    cleanProgress = 0
-                    happyProgress = 0
-                    hungerBar.progress = 0
-                    cleanBar.progress = 0
-                    happyBar.progress = 0
-
-                    // Enable buttons
-                    feed.isEnabled = true
-                    clean.isEnabled = true
-                    play.isEnabled = true
-
-                    image.setImageResource(R.drawable.main)
-                    Toast.makeText(this, "Luna is happy!", Toast.LENGTH_SHORT).show()
-
-
+            happyBar.postDelayed({
+                if (happyProgress > 0) {
+                    happyProgress -= 10
+                    happyBar.progress = happyProgress
                 }
+            }, 10000)
+                }
+
+
             }
-        } } } } }
+        }
+
