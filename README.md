@@ -11,4 +11,5 @@ click on each button until each progress bar is filled up
 feed button is linked to hunger bar, clean button is linked to clean bar and play button is linked to happy bar. 
 Take care of your tamaghochi pet
 
-YOUTUBE LINK: 
+YOUTUBE LINK: https://youtu.be/FMP5Hk7Z6ls
+
